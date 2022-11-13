@@ -21,18 +21,7 @@ function createGalleryMarkup(images) {
     .join("");
 }
 
-refs.ulListEl.addEventListener("click", onListClick);
-
-function onListClick(evt) {
-  evt.preventDefault();
-
-  if (!evt.target.classList.contains("gallery__image")) {
-    return;
-  }
-  const getBigImageLink = evt.target.closest(".gallery__item").href;
-
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-}
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
