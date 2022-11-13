@@ -1,15 +1,11 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-// console.log(galleryItems);
-
 const refs = {
   ulListEl: document.querySelector(".gallery"),
 };
 const addMarkup = createGalleryMarkup(galleryItems);
 refs.ulListEl.insertAdjacentHTML("beforeend", addMarkup);
-
-// console.log(createGalleryMarkup(galleryItems));
 
 function createGalleryMarkup(images) {
   return images
